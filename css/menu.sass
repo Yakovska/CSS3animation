@@ -1,0 +1,156 @@
+/* Drop down menu */
+.menu__heading
+	padding: 30px
+	font-size: 24px
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif
+
+.menu 
+	min-height: 400px
+	
+.menu__dropDown 
+	list-style: none
+	padding: 0
+	margin: 0
+	display: inline-block
+	background: #ddd
+	border-radius: 5px
+
+.dropDown__item 
+	float: left
+	width: 150px
+	height: 65px
+	line-height: 65px
+	position: relative
+	text-transform: uppercase
+	font-size: 14px
+	color: rgba(0, 0, 0, 0.7)
+	cursor: pointer
+	
+.dropDown__item:hover 
+	background: #d5d5d5
+	border-radius: 5px
+	
+.dropDown__submenu 
+	position: absolute
+	top: 100%
+	left: 0%
+	width: 100%
+	padding: 0
+	
+.submenu__item 
+	background: #666
+	color: rgba(255, 255, 255, 0.7)
+	
+.submenu__item:hover 
+	background: #606060
+	
+.submenu__item:last-child 
+	border-radius: 0px 0px 5px 5px
+	
+.submenu__item 
+	display: none
+	
+.dropDown__item:hover .submenu__item 
+	display: block
+
+/* MENU1 */	
+.dropDown__item:hover .dropDown__submenu .dropDown__sumbenu1
+	perspective: 1000px
+
+.dropDown__item:hover .submenu__item1
+	opacity: 0
+	@for $i from 1 through 6
+		&:nth-child(#{$i})
+			animation: 
+				name: menu1
+				duration: 300ms
+				delay: (150ms * $i) - 300
+				timing-function: ease-in-out
+				fill-mode: forwards
+
+@keyframes menu1
+	0%
+		opacity: 0
+		transform: rotateY(-90deg) translateY(30px)
+	
+	100%
+		opacity: 1
+		transform: rotateY(0deg) translateY(0px)
+
+/* MENU2 */	
+.dropDown__item:hover .dropDown__submenu .dropDown__sumbenu2
+	perspective: 1000px
+
+.dropDown__item:hover .submenu__item2
+	opacity: 0
+	transform-origin: top center
+	@for $i from 1 through 6
+		&:nth-child(#{$i})
+			animation: 
+				name: menu2
+				duration: 300ms
+				delay: (150ms * $i) - 300
+				timing-function: ease-in-out
+				fill-mode: forwards
+
+@keyframes menu2
+	0%
+		opacity: 0
+		transform: rotateX(-90deg) 
+	60%
+		transform: rotateX(50deg) 
+	100%
+		opacity: 1
+		transform: rotateX(0deg) 
+
+/* MENU3 */	
+.dropDown__item:hover .dropDown__submenu .dropDown__sumbenu3
+	perspective: 1000px
+
+.dropDown__item:hover .submenu__item3
+	opacity: 0
+	transform-origin: top center
+	@for $i from 1 through 6
+		&:nth-child(#{$i})
+			animation: 
+				name: menu3
+				duration: 300ms
+				delay: (150ms * $i) - 300
+				timing-function: ease-in-out
+				fill-mode: forwards
+
+@keyframes menu3
+	0%
+		opacity: 0
+		transform: scale(0.3)  translateY(-60px) 
+	80%
+		transform: scale(1.2) translateY(10px)
+	100%
+		transform: scale(1) translateY(0px)
+		opacity: 1
+
+/* MENU4 */	
+.dropDown__item:hover .dropDown__submenu .dropDown__sumbenu4
+	perspective: 1000px
+	transform-origin: top right
+.dropDown__item:hover .submenu__item4
+	opacity: 0
+	transform-origin: top center
+	@for $i from 1 through 6
+		&:nth-child(#{$i})
+			animation: 
+				name: menu4
+				duration: 300ms
+				delay: (150ms * $i) - 300
+				timing-function: ease-in-out
+				fill-mode: forwards
+
+@keyframes menu4
+	0%
+		opacity: 0
+		transform: rotate(-30deg) translateX(30px)
+	100%
+		transform: rotate(0deg) translateX(0px)
+		opacity: 1
+
+

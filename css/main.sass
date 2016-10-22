@@ -1,0 +1,680 @@
+body
+	margin: 0
+	font-size: 0
+
+.wrap
+	padding: 50px
+	background: #eee
+
+.wrap__block
+	padding: 50px
+	text-align: center
+	background: #fff
+	box-shadow: 40px 40px 60px -20px rgba(0,0,0,0.1)
+
+/*1. Circles menu*/
+.circles
+	margin-top: 80px
+	position: relative
+	padding-bottom: 80px
+	background: #fff
+
+.circles__line
+	width: 60%
+	margin: 0 20%
+	position: absolute
+
+.blocks
+	width: 60%
+	margin: 0 20%
+	text-align: center
+	position: absolute
+	top: -8px
+
+.circles__block
+	display: inline-block
+	margin-left: 80px
+
+.circles__block:fist-child
+	margin-left: 0
+
+.circles__link
+	text-decoration: none
+	color: transparent
+
+
+.circles__circle
+	display: block
+	width: 16px
+	height: 16px
+	border-radius: 50%
+	margin: 0 auto
+	-webkit-transition: transform ease-out 0.2s
+	-moz-transition: transform ease-out 0.2s
+	-o-transition: transform ease-out 0.2s
+	-ms-transition: transform ease-out 0.2s
+	transition: transform ease-out 0.2s
+
+.circles__circle:hover
+	transform: scale(1.5, 1.5)
+
+.circles__header
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif
+	text-transform: uppercase
+	font-size: 16px
+
+.green
+	color: green
+	background-color: green
+
+.pink
+	color: pink
+	background-color: pink
+
+.darkmagenta
+	color: darkmagenta
+	background-color: darkmagenta
+
+.blue
+	color: blue
+	background-color: blue
+
+
+/*2. Swing*/
+
+@keyframes swing
+	20%  
+		transform: rotate(15deg) 
+	40%  
+		transform: rotate(-10deg) 
+	60%  
+		transform: rotate(5deg) 
+	80%  
+		transform: rotate(-5deg) 
+	100%  
+		transform: rotate(0deg)
+
+.block__swing
+	background-color: #04216B
+	width: 40%
+	margin: 30px auto 0
+	padding: 30px 0
+	text-align: center	
+
+.swing
+	display: inline-block
+	margin-left: 70px
+	transform-origin: top center
+	position: relative
+
+.swing:first-child
+	margin-left: 0	
+
+.swing:hover
+	-webkit-animation-name: swing 
+	animation-name: swing 
+	-webkit-animation-fill-mode: both
+	animation-fill-mode: both
+	-webkit-animation-duration: 1s
+	animation-duration: 1s
+
+.swing:hover .swing__link
+	text-decoration: underline
+
+.fa-bicycle, .fa-binoculars, .fa-camera
+	font-size: 36px!important
+	color: #fff
+	transform-origin: top center
+	animation-name: swing
+
+.swing__link
+	text-decoration: none
+	color: #fff
+
+.swing__header
+	margin: 5px auto
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif
+	font-size: 14px
+
+
+	/* 3. Balloon*/
+@keyframes balloon
+	0%, 45%, 100%   
+		left: 50px 
+		top: 50px
+	10%, 15%  
+		left: 90px 
+		top: 50px
+	25%  
+		left: 90px 
+		top: 90px
+	35%  
+		left: 50px 
+		top: 90px
+	60%  
+		left: 120px 
+		top: 120px
+	75%  
+		left: 120px 
+		top: 50px
+	88%  
+		left: 50px 
+		top: 120px
+
+
+.balloon
+	background-image: url(../img/balloon.png)
+	background-repeat: no-repeat
+	width: 135px
+	height: 300px
+	position: absolute
+	z-index: 300
+	top: 50px
+	left: 50px
+	animation: balloon 40s linear 3s infinite alternate running
+
+
+/* 4. Hover */
+.hoverBlock
+	margin: 50px auto 
+	text-align: center 
+
+.hoverBlock__heading	
+	padding: 50px
+	font-size: 24px
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif
+
+.photoHover
+	width: 18%
+	margin-left: 1%
+	display: inline-block
+	margin-top: 10px
+	overflow: hidden
+	position: relative
+
+
+.hover__img
+	width: 100%
+
+.hover, .content
+	position: absolute
+	top: 0
+	left: 0
+	overflow: hidden
+	font-family: Helvetica
+	width: 100%
+	height: 100%
+	color: #fff
+
+.hover__header
+	text-transform: uppercase
+	background-color: rgba(0, 0, 0, 0.8)
+	font-size: 18px
+	margin: 30px 0 0 0
+	padding: 10px
+
+.hover__text
+	font-style: italic
+	font-size: 12px
+	padding: 10px 20px 20px
+
+.hover__link
+	text-decoration: none
+	padding: 10px 14px
+	background-color: #000
+	text-transform: uppercase
+	color: #fff
+	font-size: 10px
+	display: inline-block
+
+/*First img*/
+.hover__img1
+	-webkit-transition: all 0.2s linear
+	-o-transition: all 0.2s linear
+	transition: all 0.2s linear
+
+.hover1
+	opacity: 0
+	background-color: rgba(219, 127, 8, 0.7)
+	transition: all 0.4s ease-in-out
+
+.hover__header1, 
+.hover__text1, 
+.hover__link1
+	opacity: 0
+	transition: all 0.2s ease-in-out
+
+.hover__header1
+	transform: translateY(-100px)
+
+.hover__text1
+	transform: translateY(100px)
+
+.photoHover_first:hover .hover__img1
+	transform: scale(1.1)
+
+.photoHover_first:hover .hover1
+	opacity: 1
+
+.photoHover_first:hover .hover__header1,
+.photoHover_first:hover .hover__text1,
+.photoHover_first:hover .hover__link1
+	opacity: 1
+	transform: translateY(0px)
+
+.photoHover_first:hover .hover__text1
+	transition-delay: 0.1s
+
+/*Second img*/
+.hover__img2,
+.hover__header2,
+.hover__text2,
+.hover__link2
+	transition: all 0.2s ease-in
+
+.hover2
+	background-color: rgba(115,146,184,0.7)
+	width: 100%
+	padding: 100px
+	height: 125%
+	opacity: 0
+	transform: translate(265px, 145px) rotate(45deg)
+
+.hover__header2
+	border-bottom: 1px solid rgba(0,0,0,0.3)
+	margin: 20px 40px 0
+	transform: translate(200px, -200px)
+	background: transparent
+
+.hover__text2
+	transform: translate(-200px, 200px)
+
+.hover__link2
+	transform: translate(0px, 100px)
+
+.photoHover_second:hover .hover2
+	opacity: 1
+	transform: translate(-80px, -125px) rotate(45deg)
+
+.photoHover_second:hover .hover__header2,
+.photoHover_second:hover .hover__text2,
+.photoHover_second:hover .hover__link2
+	transform: translate(0px, 0px)
+
+.photoHover_second:hover .hover__header2
+	transition-delay: 0.3s
+
+.photoHover_second:hover .hover__text2
+	transition-delay: 0.4s
+
+.photoHover_second:hover .hover__link2
+	transition-delay: 0.5s
+
+
+/*Third img*/
+.hover__img3,
+.hover__header3,
+.hover__text3,
+.hover__link3
+	-webkit-transition: all 0.2s ease-in
+	-o-transition: all 0.2s ease-in
+	transition: all 0.2s ease-in
+
+.hover3
+	background-color: rgba(0,0,0,0.6)
+	opacity: 0
+	transform: translate(460px, -100px) rotate(180deg)
+	transition: all 0.2s 0.4s ease-in-out
+
+.hover__header3
+	transform: translateY(-100px)
+
+.hover__text3
+	transform: translateY(300px) rotate(90deg)
+
+.hover__link3
+	transform: translateY(-200px)
+
+.photoHover_third:hover .hover3
+	opacity: 1
+	transition-delay: 0s
+	transform: translate(0px, 0px)
+
+.photoHover_third:hover .hover__header3
+	transform: translateY(0px)
+	transition-delay: 0.5s
+
+.photoHover_third:hover .hover__text3
+	transform: translateX(0px) rotate(0deg)
+	transition-delay: 0.4s
+
+.hover__link3
+	transform: translateY(0px)
+	transition-delay: 0.3s
+
+/*Fourth img*/
+.hover__img4
+	transition: all 0.4s ease-in-out 0.2s
+	opacity: 1
+
+.hover4
+	background-color: rgba(0,0,0,0.8)
+	opacity: 0
+	transform: scale(0) rotate(-180deg)
+	transition: all 0.4s ease-in
+	border-radius: 0px
+
+.hover__header4,
+.hover__text4,
+.hover__link4
+	transition: all 0.5s ease-in-out
+	opacity: 0
+
+.hover__header4
+	border-bottom: 1px solid rgba(0,0,0,0.3)
+	background: transparent
+	margin: 20px 40x 0
+
+.photoHover_fourth:hover .hover4
+	opacity: 1
+	transform: scale(1) rotate(0deg)
+	transition-delay: 0.2s
+
+.photoHover_fourth:hover .hover__img4
+	transform: scale(0)
+	opacity: 0
+	transition-delay: 0s
+
+.photoHover_fourth:hover .hover__header4,
+.photoHover_fourth:hover .hover__text4,
+.photoHover_fourth:hover .hover__link4
+	opacity: 1
+	transition-delay: 0.5s
+
+
+/*Fifth img*/
+.hover__img5
+	transition: all 0.3s ease-in-out
+
+.hover5
+	background-color: rgba(146,96,91,0.3)
+	transform: translateX(-500px)
+	opacity: 1
+	transition: all 0.4s ease-in-out
+
+.hover__header5
+	background: rgba(255, 255, 255, 0.5)
+	color: #fff
+	box-shadow: 0px 1px 3px rgba(159, 141, 140, 0.5)
+
+.hover__text5
+	opacity: 0
+	color: #333
+	transition: all 0.2s linear
+
+.photoHover_fifth:hover .hover5
+	transform: translateX(0px)
+
+.photoHover_fifth:hover .hover__img5
+	transform: translateX(500px)
+	transition-delay: 0.1s
+
+.photoHover_fifth:hover .hover__text5
+	opacity: 1
+	transition-delay: 0.4s
+
+
+/*Sixth img*/
+.hover__img6
+	transition: all 0.4s ease-in-out 0.5s
+
+.hover6,
+.hover__header6,
+.hover__text6,
+.hover__link6
+	opacity: 0
+
+.hover6
+	background-color: rgba(146,96,91,0.5)
+	transition: all 0.3s ease-in 0.4s
+
+.hover__header6,
+.hover__text6
+	transform: scale(10)
+
+.hover__header6,
+.hover__link6
+	transition: all 0.3s ease-in-out 0.1s
+
+.hover__header6
+	border-bottom: 1px solid rgba(0,0,0,0.3)
+	background-color: transparent
+	margin: 20px 40px 0
+
+.hover__text6
+	transition: all 0.3s ease-in-out 0.2s
+
+.hover__link6
+	transform: translateY(100px)
+
+.photoHover_sixth:hover .hover6,
+.photoHover_sixth:hover .hover__img6
+	transition-delay: 0s
+
+.photoHover_sixth:hover .hover6,
+.photoHover_sixth:hover .hover__header6,
+.photoHover_sixth:hover .hover__text6,
+.photoHover_sixth:hover .hover__link6
+	opacity: 1
+
+.photoHover_sixth:hover .hover__header6,
+.photoHover_sixth:hover .hover__text6
+	transform: scale(1)
+
+.photoHover_sixth:hover .hover__header6
+	transition-delay: 0.1s
+
+.photoHover_sixth:hover .hover__text6
+	transition-delay: 0.2s
+
+.photoHover_sixth:hover .hover__link6
+	transform: translateY(0px)
+	transition-delay: 0.3s
+
+
+/*Seventh img*/
+.hover__img7
+	transition: all 0.5s ease-out
+	opacity: 1
+
+.hover7
+	background-color: rgba(77,44,35,0.5)
+	transform: rotate(0deg) scale(1)
+	opacity: 0
+	transition: all 0.3s ease-out
+	transform: translateY(-200px) rotate(180deg)
+
+.hover__header7,
+.hover__text7,
+.hover__link7
+	transform: translateY(-200px)
+	transition: all 0.2s ease-in-out
+
+.photoHover_seventh:hover .hover__img7
+	transform: rotate(720deg) scale(0)
+	opacity: 0
+
+.photoHover_seventh:hover .hover7
+	opacity: 1
+	transform: translateY(0px) rotate(0deg)
+	transition-delay: 0.4s
+ 
+.photoHover_seventh:hover .hover__header7,
+.photoHover_seventh:hover .hover__text7,
+.photoHover_seventh:hover .hover__link7
+	transform: translateY(0px)
+
+.photoHover_seventh:hover .hover__header7
+	transition-delay: 0.7s
+
+.photoHover_seventh:hover .hover__text7
+	transition-delay: 0.6s
+
+.photoHover_seventh:hover .hover__link7
+	transition-delay: 0.5s
+
+
+/*Eighth img*/
+@keyframes bounceY 
+	0%  
+		transform: translateY(-205px)
+	40%  
+		transform: translateY(-100px)
+	65%  
+		transform: translateY(-52px)
+	82%  
+		transform: translateY(-25px)
+	92%  
+		transform: translateY(-12px)
+	55%, 75%, 87%, 97%, 100%  
+		transform: translateY(0px)
+
+.hover8
+	background-color: rgba(255,255,255,0.7)
+	top: -200px
+	opacity: 0
+	transition: all 0.3s ease-out 0.5s
+
+.hover__header8,
+.hover__text8,
+.hover__link8
+	transform: translateY(-200px)
+
+.hover__header8
+	transition: all 0.2s ease-in-out 0.1s
+
+.hover__text8
+	color: #333
+	transition: all 0.2s ease-in-out 0.2s
+
+.hover__link8
+	transition: all 0.2s ease-in-out 0.3s
+
+.photoHover_eighth:hover .hover8
+	opacity: 1
+	top: 0px
+	transition-delay: 0s
+	animation: bounceY 0.9s linear
+
+.photoHover_eighth:hover .hover__header8,
+.photoHover_eighth:hover .hover__text8,
+.photoHover_eighth:hover .hover__link8
+	transform: translateY(0px)
+
+.photoHover_eighth:hover .hover__header8
+	transition-delay: 0.4s
+
+.photoHover_eighth:hover .hover__text8
+	transition-delay: 0.2s
+
+.photoHover_eighth:hover .hover__link8
+	transition-delay: 0s
+
+/*Ninth img*/
+.hover9-1, .hover9-2
+	background-color: rgba(0,0,0,0.5)
+	height: 500px
+	width: 500px
+	background: rgba(119,0,36,0.5)
+	opacity: 1
+	transition: all 0.3s ease-in-out 0.6s
+
+.hover9-1
+	left: auto
+	right: 0px
+	transform: rotate(45deg) translateX(-250px)
+	transform-origin: 100% 0%
+
+.hover9-2
+	top: auto
+	bottom: 0
+	transform: rotate(45deg) translateX(250px)
+	transform-origin: 0% 100%
+
+.content9
+	background: rgba(0,0,0,0.9)
+	height: 0px
+	opacity: 0.5
+	width: 361px
+	overflow: hidden
+	transform: rotate(-33.5deg) translate(-112px, 166px)
+	transform-origin: 0% 100%
+	transition: all 0.4s ease-in-out 0.3s
+
+.hover__header9
+	background: transparent
+	margin-top: 5px
+	border-bottom: 1px solid rgba(255,255,255,0.2)
+
+.hover__link9
+	display: none
+
+.photoHover_ninth:hover .content9
+	height: 60%
+	width: 100%
+	opacity: 0.9
+	top: 40px
+	transform: rotate(0deg) translate(0px, 0px)
+
+.photoHover_ninth:hover .hover9-1,
+.photoHover_ninth:hover .hover9-2
+	transition-delay: 0s
+
+.photoHover_ninth:hover .hover9-1
+	transform: rotate(45deg) translateX(1px)
+
+.photoHover_ninth:hover .hover9-2
+	transform: rotate(45deg) translateX(-1px)
+
+
+/*Tenth img*/
+.hover__img10
+	transform: scaleY(1)
+	transition: all 0.7s ease-in-out
+
+.hover10
+	background-color: rgba(255,231,179,0.6)
+	transition: all 0.5s linear
+	opacity: 0
+
+.hover__header10,
+.hover__text10,
+.hover__link10
+	transition: all 0.5s linear
+	opacity: 0
+	transform: scale(0)
+
+.hover__text10,
+.hover__header10
+	color: #333
+
+.hover__header10
+	border-bottom: 1px solid rgba(0,0,0,0.3)
+	background-color: transparent
+	margin: 20px 40px 0
+
+.photoHover_tenth:hover .hover__img10
+	transform: scale(10)
+	opacity: 0
+
+.photoHover_tenth:hover .hover10
+	opacity: 1
+
+.photoHover_tenth:hover .hover__header10,
+.photoHover_tenth:hover .hover__text10,
+.photoHover_tenth:hover .hover__link10
+	transform: scale(1)
+	opacity: 1
+
+
+
